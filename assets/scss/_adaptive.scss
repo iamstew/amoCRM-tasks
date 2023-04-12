@@ -1,0 +1,205 @@
+@media (max-device-width: 1024px) {
+    body{
+        header{
+            .nav-left{
+                width: 100%;
+                justify-content: space-between;
+                &__links__list{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            .nav-right{
+                display: none;
+            }
+        }
+        main{
+            .intro{
+                &__title{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            .presents{
+                &__button{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+        footer{
+            .menu{
+                &__link:nth-child(1){
+                    order: -5;
+                }
+                &__link:nth-child(3){
+                    order: -3;
+                }
+                &__link:nth-child(2){
+                    order: -2;
+                }
+                &__link:nth-child(4){
+                    order: -4;
+                }
+            }
+        }
+    }
+}
+
+@media (max-device-width: 768px) {
+    body{
+        header{
+            .nav-left{
+                &__link:last-child{
+                    display: none;
+                }
+            }
+        }
+        main{
+            padding: 95px 0 60px;
+            .intro{
+                &__title{
+                    font-size: 36px;
+                }
+                &__subtitle{
+                    margin-top: 15px;
+                }
+            }
+            .presents{
+                &__list{
+                    margin-top: 20px;
+                }
+            }
+        }
+        footer{
+            padding: 40px 0 60px;
+            .footer__title{
+                font-size: 12px;
+            }
+            .inner{
+                flex-direction: column;
+                gap: 30px;
+            }
+            .menu{
+                margin-left: 0;
+                flex: 0 0 auto;
+            }
+            .contacts{
+                margin: 0;
+                text-align: left;
+                &__links{
+                    gap: 12px;
+                }
+                &__link{
+                    &__phone{
+                        font-size: 16px !important;
+                    }
+                    &__icon{
+                        width: 20px;
+                    }
+                }
+                &__messangers{
+                    justify-content: flex-start;
+                }
+                &__address{
+                    font-size: 14px;
+                }
+            }
+            .rights{
+                text-align: left;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-device-width: 425px) {
+    body{
+        position: relative;
+        header{
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 20px 15px;
+            background: #0E1014;
+            .nav-left{
+                &__links{
+                    &__list{
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+                &__logo{
+                    display: none;
+                }
+                &__link{
+                    font-size: 12px;
+                }
+            }
+        }
+        main{
+            flex-direction: column !important;
+            gap: 45px;
+            .mobile-background{
+                display: block;
+            }
+            .presents{
+                text-align: left;
+                &__title{
+                    &-gradient{
+                        text-transform: lowercase;
+                    }
+                }
+                &__list{
+                    font-family: 'Montserrat';
+                    gap: 15px 10px;
+                    grid-template-columns: auto;
+                    grid-template-areas: "audit widgets"
+                    "dashboard month";
+                    &__item{
+                        position: relative;
+                        
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: calc(50% - 1px);
+                            left: 0;
+                            width: 10px;
+                            height: 1px;
+                            background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+                        }
+                        &__title{
+                            letter-spacing: 0.05em;
+                            font-size: 13px;
+                            margin-left: 15px;
+                            &.desktop{
+                                display: none;
+                            }
+                            &.mobile{
+                                display: block;
+                            }
+                        }
+                        &__subtitle{
+                            display: none;
+                        }
+                    }
+                }
+                &__button{
+                    display: none;
+                }
+            }
+        }
+        footer{
+            .footer__link{
+                font-size: 14px;
+            }
+        }
+    }
+}

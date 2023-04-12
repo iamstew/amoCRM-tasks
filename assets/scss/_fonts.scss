@@ -1,0 +1,55 @@
+@mixin font($family, $src, $weight){
+    @font-face {
+        font-family: $family;
+        src: url($src);
+        font-weight: $weight;
+    }
+}
+
+//Inter font
+
+@include font(
+    'Inter',
+    '../fonts/Inter/Inter-Regular.ttf',
+    400
+    );
+    
+@include font(
+    'Inter',
+    '../fonts/Inter/Inter-Medium.ttf',
+    500
+);
+        
+@include font(
+    'Inter',
+    '../fonts/Inter/Inter-SemiBold.ttf',
+    600
+);
+@include font(
+    'Inter',
+    '../fonts/Inter/Inter-ExtraBold.ttf',
+    900
+);
+    
+//Montserrat font
+@include font(
+    'Montserrat',
+    '../fonts/Montserrat/Montserrat-Light.ttf',
+    300
+);
+@include font(
+    'Montserrat',
+    '../fonts/Montserrat/Montserrat-Regular.ttf',
+    400
+);
+@include font(
+    'Montserrat',
+    '../fonts/Montserrat/Montserrat-Medium.ttf',
+    500
+);
+@include font(
+    'Montserrat',
+    '../fonts/Montserrat/Montserrat-SemiBold.ttf',
+    600
+);
+            

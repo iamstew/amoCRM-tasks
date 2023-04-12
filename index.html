@@ -1,19 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css">
-    <title>1 task</title>
-  </head>
-  <body>
-    <div>
-        <input placeholder="Seconds" type="text" />
-        <button>Start</button>
-    </div>
 
-    <span>hh:mm:ss</span>
-    <script src="./index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Welbex</title>
+</head>
+
+<body class="column">
+  <header class="row">
+    <nav class="nav-left row">
+      <a href="#" class="nav-left__logo">
+        <img src="./assets/images/logo_welbex.svg" alt="" class="nav-left__logo__image">
+      </a>
+      <div class="nav-left__links__list row">
+        <a href="#" class="nav-left__link nav__link">услуги</a>
+        <a href="#" class="nav-left__link nav__link">виджеты</a>
+        <a href="#" class="nav-left__link nav__link">интеграции</a>
+        <a href="#" class="nav-left__link nav__link">кейсы</a>
+        <a href="#" class="nav-left__link nav__link">сертификаты</a>
+      </div>
+    </nav>
+    <nav class="nav-right row">
+      <a href="tel:+75555555555" class="nav-right__link__phone nav__link">+7 555 555-55-55</a>
+      <a href="#" class="nav-right__link nav__link">
+        <img src="./assets/images/telegram.svg" alt="" class="nav-right__link__icon">
+      </a>
+      <a href="#" class="nav-right__link nav__link">
+        <img src="./assets/images/viber.svg" alt="" class="nav-right__link__icon">
+      </a>
+      <a href="#" class="nav-right__link nav__link">
+        <img src="./assets/images/whatsapp.svg" alt="" class="nav-right__link__icon">
+      </a>
+    </nav>
+  </header>
+  <main class="row">
+    <img src="./assets/images/glass.png" alt="" class="mobile-background">
+    <div class="intro">
+      <h1 class="intro__title">Зарабатывайте<br/>больше<br/><span class="intro__title-gradient">с WELBEX</span></h1>
+      <p class="intro__subtitle">Развиваем и контролируем<br/>продажи за вас</p>
+    </div>
+    <div class="presents">
+      <h2 class="presents__title">Вместе с <span class="presents__title-gradient">бесплатной<br/>консультацией</span> мы дарим:</h2>
+      <div class="presents__list">
+        <div class="presents__list__item widgets">
+          <h3 class="presents__list__item__title mobile">30 виджетов</h3>
+          <h3 class="presents__list__item__title desktop">виджеты</h3>
+          <p class="presents__list__item__subtitle">30 готовых<br/>решений</p>
+        </div>
+        <div class="presents__list__item dashboard">
+          <h3 class="presents__list__item__title mobile">dashboard</h3>
+          <h3 class="presents__list__item__title desktop">dashboard</h3>
+          <p class="presents__list__item__subtitle">с показателями<br/>вашего бизнеса</p>
+        </div>
+        <div class="presents__list__item audit">
+          <h3 class="presents__list__item__title mobile">skype аудит</h3>
+          <h3 class="presents__list__item__title desktop">skype аудит</h3>
+          <p class="presents__list__item__subtitle">отдела продаж<br/>и CRM системы</p>
+        </div>
+        <div class="presents__list__item month">
+          <h3 class="presents__list__item__title mobile">месяц amocrm</h3>
+          <h3 class="presents__list__item__title desktop">35 дней</h3>
+          <p class="presents__list__item__subtitle">использования<br/>CRM</p>
+        </div>
+      </div>
+      <button class="presents__button">Получить консультацию</button>
+    </div>
+  </main>
+  <footer>
+    <div class="inner row">
+      <div class="about">
+        <h4 class="about__title footer__title">о компании</h4>
+        <div class="about__links column">
+          <a href="#" class="about__link footer__link">Партнерская программа</a>
+          <a href="#" class="about__link footer__link">Вакансии</a>
+        </div>
+      </div>
+      <div class="menu">
+        <h4 class="menu__title footer__title">меню</h4>
+        <div class="menu__links row">
+          <a href="#" class="menu__link footer__link">Расчет стоимости</a>
+          <a id="cases" href="#" class="menu__link footer__link">Кейсы</a>
+          <a href="#" class="menu__link footer__link">Услуги</a>
+          <a id="mails" href="#" class="menu__link footer__link">Благодарственные письма</a>
+          <a href="#" class="menu__link footer__link">Виджеты</a>
+          <a href="#" class="menu__link footer__link">Сертификаты</a>
+          <a href="#" class="menu__link footer__link">Интеграции</a>
+          <a href="#" class="menu__link footer__link">Блог на Youtube</a>
+          <a href="#" class="menu__link footer__link">Наши клиенты</a>
+          <a href="#" class="menu__link footer__link">Вопрос / Ответ</a>
+        </div>
+      </div>
+      <div class="contacts">
+        <h4 class="contacts__title footer__title">контакты</h4>
+        <div class="contacts__links column">
+          <a href="tel:+75555555555" class="contacts__link contacts__link__phone footer__link">+7 555 555-55-55</a>
+          <div class="contacts__messangers row">
+            <a class="contacts__link footer__link">
+              <img src="./assets/images/telegram.svg" alt="" class="contacts__link__icon">
+            </a>
+            <a class="contacts__link footer__link">
+              <img src="./assets/images/viber.svg" alt="" class="contacts__link__icon">
+            </a>
+            <a class="contacts__link footer__link">
+              <img src="./assets/images/whatsapp.svg" alt="" class="contacts__link__icon">
+            </a>
+          </div>
+          <p class="contacts__address">Москва, Путевой проезд 3с1, к 902</p>
+        </div>
+      </div>
+    </div>
+    <div class="rights">
+      <p class="rights__reserved">©WELBEX 2022. Все права защищены.</p>
+      <a href="#" class="rights__policy">Политика конфиденциальности</a>
+    </div>
+  </footer>
+</body>
+
 </html>

@@ -1,0 +1,505 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-ExtraBold.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  padding: 0 15px;
+  background: #0E1014;
+  font-family: "Inter";
+  align-items: center;
+  color: #E4E5EA;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FCB045 27.14%, #FF3F78 97.29%);
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body header, body main, body footer {
+  width: 100%;
+}
+body header {
+  margin-top: 42px;
+  padding: 15px 0 40px;
+  justify-content: space-between;
+}
+body header .nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.1s ease-out;
+}
+body header .nav__link:hover {
+  opacity: 0.8;
+}
+body header .nav-left {
+  gap: 52px;
+  align-items: center;
+}
+body header .nav-left__logo {
+  height: 24px;
+  display: block;
+  position: relative;
+}
+body header .nav-left__logo::after {
+  content: "крупный интегратор CRM в России и ещё 8 странах";
+  color: #E4E5EA;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 300;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+}
+body header .nav-left__links__list {
+  gap: 30px;
+  position: relative;
+}
+body header .nav-left__links__list::before {
+  content: "";
+  position: absolute;
+  right: -16px;
+  top: -215px;
+  width: 259px;
+  height: 259px;
+  border-radius: 50%;
+  background: #833AB4;
+  opacity: 0.5;
+  filter: blur(196px);
+}
+body header .nav-left__links__list::after {
+  content: "";
+  position: absolute;
+  right: -83px;
+  top: -63px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+  filter: blur(5px);
+  backdrop-filter: blur(2px);
+}
+body header .nav-right {
+  align-items: center;
+  gap: 34px;
+}
+body header .nav-right__link {
+  display: flex;
+}
+body header .nav-right__link__phone {
+  margin-right: 13px;
+}
+body main {
+  padding: 90px 0 69px 0;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+}
+body main .mobile-background {
+  display: none;
+  position: absolute;
+  width: 100%;
+  min-width: 320px;
+  z-index: -1;
+  top: 50px;
+  left: -15px;
+}
+body main .intro__title {
+  position: relative;
+  font-size: 48px;
+  font-weight: 400;
+}
+body main .intro__title::before {
+  content: "";
+  position: absolute;
+  left: -249px;
+  top: 42px;
+  width: 311px;
+  height: 311px;
+  border-radius: 50%;
+  background: #961A1A;
+  opacity: 0.5;
+  filter: blur(196px);
+}
+body main .intro__title::after {
+  content: "";
+  position: absolute;
+  right: -93px;
+  top: -126px;
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  backdrop-filter: blur(2px);
+}
+body main .intro__title-gradient {
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 900;
+}
+body main .intro__subtitle {
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin-top: 30px;
+}
+body main .presents {
+  text-align: right;
+}
+body main .presents__title {
+  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 500;
+  font-size: 18px;
+}
+body main .presents__title-gradient {
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+body main .presents__list {
+  margin-top: 40px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "widgets dashboard" "audit month";
+}
+body main .presents__list__item.widgets {
+  grid-area: widgets;
+}
+body main .presents__list__item.dashboard {
+  grid-area: dashboard;
+}
+body main .presents__list__item.audit {
+  grid-area: audit;
+}
+body main .presents__list__item.month {
+  grid-area: month;
+}
+body main .presents__list__item__title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+body main .presents__list__item__title.mobile {
+  display: none;
+}
+body main .presents__list__item__subtitle {
+  margin-top: 6px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+}
+body main .presents__button {
+  position: relative;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  margin-top: 61px;
+  padding: 21px 35px;
+  background: #4077F3;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 500;
+}
+body main .presents__button::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -175px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  filter: blur(2.5px);
+  backdrop-filter: blur(2px);
+}
+body footer {
+  padding: 55px 0 20px 0;
+}
+body footer .footer__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #656566;
+  margin-bottom: 20px;
+}
+body footer .footer__link {
+  transition: all 0.1s ease-out;
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+body footer .footer__link:hover {
+  opacity: 0.8;
+}
+body footer .about {
+  flex: 0 0 auto;
+}
+body footer .about__links {
+  gap: 10px;
+}
+body footer .menu {
+  margin-left: 98px;
+  flex: 0 2 450px;
+}
+body footer .menu__links {
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+body footer .menu__link {
+  margin-bottom: 10px;
+  flex: 0 2 50%;
+}
+body footer .contacts {
+  margin-left: auto;
+  text-align: right;
+}
+body footer .contacts__links {
+  gap: 22px;
+}
+body footer .contacts__messangers {
+  gap: 14px;
+  justify-content: flex-end;
+}
+body footer .rights {
+  font-family: "Montserrat";
+  font-size: 12px;
+  margin-top: 13px;
+  text-align: right;
+}
+body footer .rights__policy {
+  color: inherit;
+}
+
+@media (max-device-width: 1024px) {
+  body header .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  body header .nav-left__links__list::after {
+    display: none;
+  }
+  body header .nav-right {
+    display: none;
+  }
+  body main .intro__title::after {
+    display: none;
+  }
+  body main .presents__button::before {
+    display: none;
+  }
+  body footer .menu__link:nth-child(1) {
+    order: -5;
+  }
+  body footer .menu__link:nth-child(3) {
+    order: -3;
+  }
+  body footer .menu__link:nth-child(2) {
+    order: -2;
+  }
+  body footer .menu__link:nth-child(4) {
+    order: -4;
+  }
+}
+@media (max-device-width: 768px) {
+  body header .nav-left__link:last-child {
+    display: none;
+  }
+  body main {
+    padding: 95px 0 60px;
+  }
+  body main .intro__title {
+    font-size: 36px;
+  }
+  body main .intro__subtitle {
+    margin-top: 15px;
+  }
+  body main .presents__list {
+    margin-top: 20px;
+  }
+  body footer {
+    padding: 40px 0 60px;
+  }
+  body footer .footer__title {
+    font-size: 12px;
+  }
+  body footer .inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+  body footer .menu {
+    margin-left: 0;
+    flex: 0 0 auto;
+  }
+  body footer .contacts {
+    margin: 0;
+    text-align: left;
+  }
+  body footer .contacts__links {
+    gap: 12px;
+  }
+  body footer .contacts__link__phone {
+    font-size: 16px !important;
+  }
+  body footer .contacts__link__icon {
+    width: 20px;
+  }
+  body footer .contacts__messangers {
+    justify-content: flex-start;
+  }
+  body footer .contacts__address {
+    font-size: 14px;
+  }
+  body footer .rights {
+    text-align: left;
+    margin-top: 50px;
+  }
+}
+@media (max-device-width: 425px) {
+  body {
+    position: relative;
+  }
+  body header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px 15px;
+    background: #0E1014;
+  }
+  body header .nav-left__links__list::before {
+    display: none;
+  }
+  body header .nav-left__logo {
+    display: none;
+  }
+  body header .nav-left__link {
+    font-size: 12px;
+  }
+  body main {
+    flex-direction: column !important;
+    gap: 45px;
+  }
+  body main .mobile-background {
+    display: block;
+  }
+  body main .presents {
+    text-align: left;
+  }
+  body main .presents__title-gradient {
+    text-transform: lowercase;
+  }
+  body main .presents__list {
+    font-family: "Montserrat";
+    gap: 15px 10px;
+    grid-template-columns: auto;
+    grid-template-areas: "audit widgets" "dashboard month";
+  }
+  body main .presents__list__item {
+    position: relative;
+  }
+  body main .presents__list__item::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+  }
+  body main .presents__list__item__title {
+    letter-spacing: 0.05em;
+    font-size: 13px;
+    margin-left: 15px;
+  }
+  body main .presents__list__item__title.desktop {
+    display: none;
+  }
+  body main .presents__list__item__title.mobile {
+    display: block;
+  }
+  body main .presents__list__item__subtitle {
+    display: none;
+  }
+  body main .presents__button {
+    display: none;
+  }
+  body footer .footer__link {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
